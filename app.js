@@ -88,8 +88,6 @@ app.use(hpp({
 // just test middleware
 app.use((req, res, next) => { //in a midlewear we will always have req and res cause we are between them here we also have next as 3thrd arguement.
     req.requestTime = new Date().toISOString;
-    console.log(req.cookies);
-    //console.log(x);
     next(); // we use next to move on. do the next thing. send back the response to the client.
 });
 

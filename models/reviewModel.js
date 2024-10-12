@@ -70,7 +70,6 @@ reviewSchema.statics.calcAverageRatings = async function (tourId) {
             }
         }
     ]);
-    console.log(stats);
     if (stats.length > 0) {
         await Tour.findByIdAndUpdate(tourId, {
             ratingsQuantity: stats[0].nRating,
@@ -91,7 +90,6 @@ reviewSchema.pre('save', function () {
 //findByIdAndUpdate/Delete
 reviewSchema.pre(/^findOneAnd/, async function (next) {
     this.r = await this.findOne()//find the current review and than niddleware below will to what nedded to be done. we did it like this because it a pre middleware(before the save) but we no a post request(update date) so one middleware cant be both.
-    console.log(this.r);
     next();
 });
 

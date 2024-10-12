@@ -164,10 +164,6 @@ tourSchema.pre(/^find/, function (next) { // this always point to current query
 })
 
 
-tourSchema.post(/^find/, function (docs, next) {
-    console.log(`Query took ${Date.now() - this.start} milliseconds!`);
-    next();
-})
 
 
 // AGGREGATION MIDDLEWARE- take care of the aggregation of the request. the problem- we choose to not show the secret tour but when we sidply tour but difficulty it's also there, it's difficulty is calculated

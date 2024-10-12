@@ -8,7 +8,7 @@ const router = express.Router({ mergeParams: true }); // why use mergeParams? we
 
 router.use(authController.protect)
 
-//POST /tour/234fad4(id of tour)/reviews we got here from tour routes after matching  /:tourId/reviews' and now we access the .route('/') with access to the id in the req.
+//POST /tour/234fad4(id of tour)/reviews g we got here from tour routes after matching  /:tourId/reviews' and now we access the .route('/') with access to the id in the req.
 router
     .route('/')
     .get(reviewController.getAllReviews)

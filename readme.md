@@ -32,7 +32,8 @@ The app is designed with best practices for security, scalability, and error han
          JWT_EXPIRES_IN=90d
          JWT_COOKIE_EXPIRES_IN=90
          STRIPE_SECRET_KEY=<your-stripe-secret-key>
-**Install the required dependencies:**
+**Install the required dependencies and run the app:**
    ```bash
-   npm install  
+   npm install
+
    npm run dev

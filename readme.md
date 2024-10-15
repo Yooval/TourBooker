@@ -32,7 +32,7 @@ DATABASE_PASSWORD=<your-database-password>
 JWT_SECRET=<your-jwt-secret>
 JWT_EXPIRES_IN=90d
 JWT_COOKIE_EXPIRES_IN=90
-STRIPE_SECRET_KEY=<your-stripe-secret-key> ```
+STRIPE_SECRET_KEY=<your-stripe-secret-key> ```bash
 
     
 

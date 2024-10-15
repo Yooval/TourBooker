@@ -25,7 +25,7 @@ The app is designed with best practices for security, scalability, and error han
 
 Set up your environment variables by creating a `.env` file in the root directory:**
 
-      ```bash
+   ```bash
    PORT=3000
    DATABASE=<your-mongodb-database-url>
    DATABASE_PASSWORD=<your-database-password>

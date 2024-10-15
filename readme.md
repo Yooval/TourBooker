@@ -35,7 +35,7 @@ Secure payment processing is handled by **Stripe**, allowing users to make payme
       
       Set up your environment variables by creating a `.env` file in the root directory:
       
-         ```bash
+   ```bash
          PORT=3000
          DATABASE=<your-mongodb-database-url>
          DATABASE_PASSWORD=<your-database-password>

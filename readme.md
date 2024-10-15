@@ -8,6 +8,17 @@ All API requests are fully documented and available in **Postman**. You can expl
 Secure payment processing is handled by **Stripe**, allowing users to make payments, view transaction details, and process refunds. Stripe provides comprehensive information about payments, including the time of initiation, authorization, tour details, and the card used for the transaction.
 
 The app is designed with best practices for security, scalability, and error handling, safeguarding user data and transactions.
+![login](https://github.com/user-attachments/assets/dc28403f-0df9-4ebc-a0cf-b314f3edab47)
+
+![tours](https://github.com/user-attachments/assets/ba397af5-7f5e-45b2-b0cd-e78ddc1a2cfb)
+![tourpage1](https://github.com/user-attachments/assets/7101646f-82f1-466c-b2ac-f73b1d74ee4c)
+
+![tourpage2](https://github.com/user-attachments/assets/092c1119-b833-470f-9d33-a9d2653bb84d)
+
+![tourpage3](https://github.com/user-attachments/assets/5e5c9e25-29c7-4fb2-9d56-caeda0944ff5)
+
+
+
 
 ## Installation
 

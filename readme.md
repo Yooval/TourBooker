@@ -33,21 +33,3 @@ The app is designed with best practices for security, scalability, and error han
       JWT_EXPIRES_IN=90d
       JWT_COOKIE_EXPIRES_IN=90
       STRIPE_SECRET_KEY=<your-stripe-secret-key>
-
-
-    
-
-## Key Packages
-express: Web framework for building the API  
-mongoose: For MongoDB object modeling and database management  
-jsonwebtoken: For handling authentication and issuing JWT tokens  
-bcryptjs: For password hashing and security  
-dotenv: For environment variable management  
-Applications Used  
-Postman: For API testing and documentation  
-Mailtrap: For email testing in a development environment  
-MongoDB Compass: For visualizing and interacting with the database locally  
-MongoDB Atlas: A cloud-based MongoDB solution for storing and managing the database  
-
-
-

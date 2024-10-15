@@ -19,8 +19,8 @@ The app is designed with best practices for security, scalability, and error han
 
 
 3. **Install the required dependencies:**
-   ```bash
-   npm install
+      ```bash
+      npm install
 
 
    ## Local Development

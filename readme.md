@@ -31,7 +31,7 @@ Set up your environment variables by creating a `.env` file in the root director
    JWT_SECRET=<your-jwt-secret>  
    JWT_EXPIRES_IN=90d  
    JWT_COOKIE_EXPIRES_IN=90  
-   STRIPE_SECRET_KEY=<your-stripe-secret-key>  
+   STRIPE_SECRET_KEY=<your-stripe-secret-key>    
 
 ## Key Packages
 express: Web framework for building the API

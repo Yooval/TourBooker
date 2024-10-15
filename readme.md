@@ -36,8 +36,8 @@ The app is designed with best practices for security, scalability, and error han
       JWT_COOKIE_EXPIRES_IN=90
       STRIPE_SECRET_KEY=<your-stripe-secret-key>
 
-  ## Start the application:
-     ```bash
-     npm run dev
+## Start the application:
+   ```bash
+   npm run dev
      
   

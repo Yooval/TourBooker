@@ -19,9 +19,9 @@ The app is designed with best practices for security, scalability, and error han
 
 
 3. Install the required dependencies:
-   npm install
+   ### npm install
 
-Local Development
+## Installation
 Set up your environment variables by creating a .env file in the root directory:
 
 PORT=3000
@@ -32,13 +32,13 @@ JWT_EXPIRES_IN=90d
 JWT_COOKIE_EXPIRES_IN=90
 STRIPE_SECRET_KEY=<your-stripe-secret-key>
 
-Start the application:
+## Start the application:
 npm run dev
 The API will be available at http://localhost:3000.
 
 Use Postman to test the API endpoints.
 
-Key Packages
+## Key Packages
 express: Web framework for building the API
 mongoose: For MongoDB object modeling and database management
 jsonwebtoken: For handling authentication and issuing JWT tokens

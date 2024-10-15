@@ -34,7 +34,7 @@ The app is designed with best practices for security, scalability, and error han
 
       ## Local Development
       
-      Set up your environment variables by creating a `.env` file in the root directory:**
+      Set up your environment variables by creating a `.env` file in the root directory:
       
          ```bash
          PORT=3000
@@ -44,7 +44,7 @@ The app is designed with best practices for security, scalability, and error han
          JWT_EXPIRES_IN=90d
          JWT_COOKIE_EXPIRES_IN=90
          STRIPE_SECRET_KEY=<your-stripe-secret-key>
-**Install the required dependencies and run the app:**
+##Install the required dependencies and run the app:
    ```bash
    npm install
 

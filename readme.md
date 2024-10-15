@@ -34,7 +34,5 @@ The app is designed with best practices for security, scalability, and error han
          STRIPE_SECRET_KEY=<your-stripe-secret-key>
 **Install the required dependencies:**
    ```bash
-   npm install
-      **Start the app:**
-         ```bash
-         npm run dev
+   npm install  
+   npm run dev

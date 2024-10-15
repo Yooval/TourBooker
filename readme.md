@@ -32,13 +32,6 @@ JWT_EXPIRES_IN=90d
 JWT_COOKIE_EXPIRES_IN=90
 STRIPE_SECRET_KEY=<your-stripe-secret-key>
 
-
-## Start the application:
-npm run dev
-The API will be available at http://localhost:3000.
-
-Use Postman to test the API endpoints.
-
 ## Key Packages
 express: Web framework for building the API
 mongoose: For MongoDB object modeling and database management

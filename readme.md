@@ -18,7 +18,7 @@ The app is designed with best practices for security, scalability, and error han
 2. Ensure you have Node.js installed on your machine.
 
 
-3. Install the required dependencies: ### npm install
+3. **Install the required dependencies:** `npm install`
 
    
 ## Installation

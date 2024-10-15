@@ -21,7 +21,8 @@ The app is designed with best practices for security, scalability, and error han
 3. **Install the required dependencies:** `npm install`
 
    
-## Installation
+## Local Development
+
 Set up your environment variables by creating a .env file in the root directory:
 
 PORT=3000

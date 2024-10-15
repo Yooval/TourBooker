@@ -35,6 +35,6 @@ The app is designed with best practices for security, scalability, and error han
 **Install the required dependencies:**
    ```bash
    npm install
-      ** Start the application: **
-      ```bash
-      npm run dev
+**Start the app:**
+   ```bash
+   npm run dev

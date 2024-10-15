@@ -18,9 +18,6 @@ The app is designed with best practices for security, scalability, and error han
 2. Ensure you have Node.js installed on your machine.
 
 
-3. **Install the required dependencies:**
-      ```bash
-      npm install
 
 
       ## Local Development
@@ -35,7 +32,9 @@ The app is designed with best practices for security, scalability, and error han
          JWT_EXPIRES_IN=90d
          JWT_COOKIE_EXPIRES_IN=90
          STRIPE_SECRET_KEY=<your-stripe-secret-key>
-
+**Install the required dependencies:**
+   ```bash
+   npm instal
 ## Start the application:
    ```bash
    npm run dev

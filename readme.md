@@ -11,9 +11,9 @@ Secure payment processing is handled by **Stripe**, allowing users to make payme
 
 ![עיצוב ללא שם](https://github.com/user-attachments/assets/6be797b1-b08a-4255-b4ea-4fe9e223c757)
 
-**Here, you can view all Stripe transactions along with their details:**
+**Here, you can view all Stripe transactions along with their details, including a comprehensive example of a single transaction:**
 
-![stripe](https://github.com/user-attachments/assets/e4e794da-b1d7-4581-8dba-e3bada677667)
+![עיצובggg שם (1)](https://github.com/user-attachments/assets/da7e66ff-98d3-41e5-a28f-170cc55d5a55)
 
 ## Installation
 

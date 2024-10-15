@@ -32,7 +32,7 @@ The app is designed with best practices for security, scalability, and error han
    JWT_SECRET=<your-jwt-secret>
    JWT_EXPIRES_IN=90d
    JWT_COOKIE_EXPIRES_IN=90
-   STRIPE_SECRET_KEY=<your-stripe-secret-key>
+   STRIPE_SECRET_KEY=<your-stripe-secret-key>```
 
 ## Key Packages
 express: Web framework for building the API

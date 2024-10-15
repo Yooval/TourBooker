@@ -7,7 +7,7 @@ All API requests are fully documented and available in **Postman**. You can expl
 
 Secure payment processing is handled by **Stripe**, allowing users to make payments, view transaction details, and process refunds. Stripe provides comprehensive information about payments, including the time of initiation, authorization, tour details, and the card used for the transaction.
 
-Here you can see all stages of the web page:
+**Here you can see all stages of the web page:**
 ![עיצוב ללא שם](https://github.com/user-attachments/assets/6be797b1-b08a-4255-b4ea-4fe9e223c757)
 
 ## Installation

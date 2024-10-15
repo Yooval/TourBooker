@@ -9,7 +9,6 @@ Secure payment processing is handled by **Stripe**, allowing users to make payme
 
 The app is designed with best practices for security, scalability, and error handling, safeguarding user data and transactions.
 
-![tours](https://github.com/user-attachments/assets/fb08fd8b-7d2c-4a6f-bb10-d3e1650c4c29)
 
 
 ![tours](https://github.com/user-attachments/assets/ba397af5-7f5e-45b2-b0cd-e78ddc1a2cfb)

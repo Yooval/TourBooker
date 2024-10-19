@@ -3,8 +3,8 @@ const catchAsync = require('./../utils/catchAsync');
 const AppError = require('../utils/appError');
 const APIFeatures = require('./../utils/apiFeatures');
 
-exports.deleteOne = Model => catchAsync(async (req, res, next) => { // we receive model as a parameter in ths func
-    const doc = await Model.findByIdAndDelete(req.params.id); // we dont put it is in a var because we dont send anything back to client.
+exports.deleteOne = Model => catchAsync(async (req, res, next) => { 
+    const doc = await Model.findByIdAndDelete(req.params.id); 
     if (!doc) {
         return next(new AppError('No document found with that ID', 404))//will go straight to error handling middleware
     }

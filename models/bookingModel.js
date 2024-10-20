@@ -6,16 +6,16 @@ const bookingSchema = new mongoose.Schema({
     ref: 'Tour',
     required: [true, 'Booking must belong to a Tour!']
   },
-  user: { // which user booked it?
+  user: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',
     required: [true, 'Booking must belong to a User!']
   },
-  price: { // what's the price of the booked tour? price can be changed so it's important
+  price: {
     type: Number,
     require: [true, 'Booking must have a price.']
   },
-  createdAt: { // when was booked?
+  createdAt: {
     type: Date,
     default: Date.now()
   },
@@ -25,10 +25,10 @@ const bookingSchema = new mongoose.Schema({
   }
 });
 
-bookingSchema.pre(/^find/, function (next) { //populate tour and user automaticly when there is a query here. so we can see them in those querry.
+bookingSchema.pre(/^find/, function (next) { //populate tour and user automaticly when there is a query here.
   this.populate('user').populate({
-    path: 'tour', // populate all usre object
-    select: 'name' // populate just the name
+    path: 'tour',
+    select: 'name' 
   });
   next();
 });

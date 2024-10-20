@@ -1,11 +1,10 @@
-//const { query } = require('express');
-//const { request } = require('../app');
+
 const Tour = require('./../models/tourModel');
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('../utils/appError');
 const factory = require('./handlerFactory');
 
-exports.aliasTopTours = (req, res, next) => { // set the properties for getting those 5. this qury will reach to get all tours with this query ready to return this 5. and it will be like oridinary query there.
+exports.aliasTopTours = (req, res, next) => { // set the properties for getting those 5 Chipest.
     req.query.limit = '5';
     req.query.sort = '-ratingsAverage,price';
     req.query.fields = 'name,price,ratingsAverage,summary,difficulty';
@@ -14,49 +13,34 @@ exports.aliasTopTours = (req, res, next) => { // set the properties for getting 
 
 exports.getAllTours = factory.getAll(Tour);
 
-exports.getTour = factory.getOne(Tour, { path: 'reviews' });//select let us specify which fields we want(dont have it here)
-// how this all work? create tour submitted in postmanand routed to create tour func which operate catchAsync(because we want to hndle errors there)
-//then, new tour created in create tour func if suceed it all handled in create tour(implementation in database and cetera) if faild handled in catchAsync
+exports.getTour = factory.getOne(Tour, { path: 'reviews' });
 exports.createTour = factory.createOne(Tour);
 
 exports.updateTour = factory.updateOne(Tour);
 
 exports.deleteTour = factory.deleteOne(Tour);
-//exports.deleteTour = catchAsync(async (req, res, next) => {
-//    const tour = await Tour.findByIdAndDelete(req.params.id); // we dont put it is in a var because we dont send anything back to client.
-//    if (!tour) {
-//        return next(new AppError('No tour found with that ID', 404))//will go straight to error handling middleware
-//    }
-
-//    res.status(204).json({
-//        status: 'success',
-//        data: null
-//    });
-//});
 
 exports.getTourStats = catchAsync(async (req, res, next) => {
 
     const stats = await Tour.aggregate([
         {
-            $match: { ratingsAverage: { $gte: 4.5 } } //all tours with rating average >=4.5. gte(and operators like it) is mongbodb operator
+            $match: { ratingsAverage: { $gte: 4.5 } }
         },
         {
             $group: {
-                _id: '$difficulty', // _id means what do you wanna group by?(price? rating?) now we want to group all tours so the null.
-                numTours: { $sum: 1 }, // we want to sum all tours so for each document(obj) add 1.
-                numRatings: { $sum: '$ratingsQuantity' },// ratingsquantity is a field in each tour show how many ratings this tour has. so for each tour we add to sum this field val.
-                avgRating: { $avg: '$ratingsAverage' }, //avg is mongodb
-                avgPrice: { $avg: '$price' }, // price is the var
+                _id: '$difficulty', 
+                numTours: { $sum: 1 }, 
+                numRatings: { $sum: '$ratingsQuantity' },
+                avgRating: { $avg: '$ratingsAverage' }, 
+                avgPrice: { $avg: '$price' }, 
                 minPrice: { $min: '$price' },
                 maxPrice: { $max: '$price' }
             }
         },
         {
-            $sort: { avgPrice: 1 }// 1 for accending
+            $sort: { avgPrice: 1 }
         },
-        //{
-        //   $match: { _id: { $ne: 'easy' } }
-        //}
+       
     ]);
     res.status(200).json({
         status: 'success',
@@ -77,19 +61,19 @@ exports.getMonthlyPlan = catchAsync(async (req, res, next) => {
             $match: {
                 startDates: {
                     $gte: new Date(`${year}-01-01`),
-                    $lte: new Date(`${year}-12-31`) //between the first and last day of 2021
+                    $lte: new Date(`${year}-12-31`) 
                 }
             }
         },
         {
             $group: {
-                _id: { $month: '$startDates' }, //group by months, we need startDates becuase those months we will goup by will be taken from there.
-                numTourStarts: { $sum: 1 }, //for every document(obj) in a month add 1 to the variable of this month.
-                tours: { $push: '$name' } // show by month/ how much in march?february?
+                _id: { $month: '$startDates' },
+                numTourStarts: { $sum: 1 },
+                tours: { $push: '$name' }
             }
         },
         {
-            $addFields: { month: '$_id' } // add at the end month for exampli if _id=4 its adding month=4 at the end.
+            $addFields: { month: '$_id' }
         },
         {
             $project: {
@@ -100,7 +84,7 @@ exports.getMonthlyPlan = catchAsync(async (req, res, next) => {
             $sort: { numTourStarts: -1 }
         },
         {
-            $limit: 12 // give only 12 months- its everything
+            $limit: 12
         }
 
     ]);
@@ -112,8 +96,7 @@ exports.getMonthlyPlan = catchAsync(async (req, res, next) => {
     });
 
 });
-//router.route('/tours-within/:distance/center/:lat lng/unit/:unit', tourController.getToursWithin);// distance- distance from whre i am. center/:lat lng - qordinates of center(whre i am). unit: km/miles cetera
-// example: tours-within/233/center/-40,45/unit/mi just to know what data should look like.
+
 exports.getToursWithin = catchAsync(async (req, res, next) => {
     const { distance, latlng, unit } = req.params;
     const [lat, lng] = latlng.split(',');
@@ -131,7 +114,7 @@ exports.getToursWithin = catchAsync(async (req, res, next) => {
 
         status: 'success',
         data: {
-            results: tours.length, // tours contains all fitt documents.
+            results: tours.length, 
             data: tours
         }
     });
@@ -141,7 +124,7 @@ exports.getDistances = catchAsync(async (req, res, next) => {
     const { latlng, unit } = req.params;
     const [lat, lng] = latlng.split(',');
 
-    const multiplier = unit === 'mi' ? 0.000621371 : 0.001; // convery to km/miles depends on what we specified.
+    const multiplier = unit === 'mi' ? 0.000621371 : 0.001; 
 
     if (!lat || !lng) {
         next(new AppError('Please provide latitude and longitude in the format lat,lng.', 400));

@@ -1,12 +1,9 @@
 ## Overview
-TourBooker is a fully-featured e-commerce web application that allows users to browse, find, book, and review tours, utilizing full **CRUD** (Create, Read, Update, Delete) operations to manage users, tours, reviews, and bookings. The application employs diverse data modeling techniques, including mail sending(with compelte Url to recreate the password if you forget it) embedded documents, referencing, and parent-child relationships, to effectively structure and relate data. Users can take advantage of advanced filtering, sorting, and pagination to easily find tours that match their preferences, book them, and leave reviews. The app also features a **geolocation** tool, enabling users to discover tours near their location, while built-in error handling ensures a seamless experience by catching and managing any issues that may arise.
+**TourBooker** is an e-commerce web application for browsing, booking, and reviewing tours. It supports full CRUD operations to manage users, tours, reviews, and bookings, with features like advanced filtering, sorting, and pagination for easy tour discovery. Users can book tours, leave reviews, and reset passwords via email links.
 
-Users, including admins, can explore their selected tours in greater detail on a web page that displays images, descriptions, maps showing starting points(using Mapbox), and includes reviews and star ratings. The webpage, built with Pug, is secured with user authentication, ensuring that only registered users, regardless of their role, can access its features. Admins also have additional capabilities to manage content, such as creating, updating, and deleting tours, and moderating user reviews.
+The app uses Mapbox for geolocation, showing starting points and nearby tours. Built-in error handling ensures smooth operation. A web page built with Pug displays detailed tour information, including images, descriptions, maps, and reviews. Authentication secures access for all users, with admins having additional permissions to manage content and moderate reviews.
 
-All API requests are fully documented and available in **Postman**. You can explore the full documentation [here](https://documenter.getpostman.com/view/38510958/2sAXxMfDTK#a79bb063-8e77-4261-9a3b-4c97fdfefc73). While it's recommended to download Postman for testing, you can also use the documentation to get a clear idea of how the API works.
-
-Secure payment processing is handled by **Stripe**, allowing users to make payments, view transaction details, and process refunds. Stripe provides comprehensive information about payments, including the time of initiation, authorization, tour details, and the card used for the transaction.
-
+Payments are securely processed with Stripe, enabling users to view transactions and request refunds. API documentation is available in Postman for easy integration and testing.
 
 **Here you can see all stages of the web page: Login page, Tours presentation, detailed views of specific tours.**
 
